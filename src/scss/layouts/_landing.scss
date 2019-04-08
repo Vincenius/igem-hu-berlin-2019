@@ -1,0 +1,17 @@
+.landing-page {
+    .site-header, .grey-bg {
+        background: #bdc3c7; // TODO variables
+    }
+
+    .site-header,
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        margin: 0;
+    }
+}
