@@ -1,0 +1,21 @@
+.image-container {
+    position: relative;
+}
+
+.image-tag {
+    position: absolute;
+    border: 2px solid black; // TODO variable
+    cursor: pointer;
+
+    .tag-caption {
+        display: none;
+        width: 100%;
+        top: -10px;
+        transform: translateY(-100%);
+        text-align: center;
+    }
+
+    &:hover .tag-caption {
+        display: block;
+    }
+}
