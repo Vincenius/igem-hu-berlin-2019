@@ -5,20 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iGEM HU-Berlin 2019</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet"> <!-- todo -->
     <link rel="stylesheet" href="dist/css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="dist/images/favicon.png">
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <!-- TODO download all external stuff-->
 </head>
 <body class="has-animations landing-page">
     <div class="container">
         <header class="full-height site-header">
-            <h1>iGEM HU Berlin</h1>
-            <h2 class="is-revealing">Chlamylicious - plastic-degrading algae</h2>
+            <div class="width-limit">
+                <h1>iGEM HU Berlin</h1>
+                <video loop autoplay> <!-- poster="dist/images/Chlamylicious3-poster.png" -->
+                    <source src="dist/images/Chlamylicious3.mp4" type="video/mp4">
+                </video>
+                <h2 class="is-revealing">Chlamylicious - plastic-degrading algae</h2>
 
-            <div id="mouse" class="mouse">
-                <span></span>
+                <div id="mouse" class="mouse">
+                    <span></span>
+                </div>
             </div>
         </header>
     </div>
@@ -26,22 +30,37 @@
     <main>
         <div class="container">
             <section class="full-height">
-                <h2 class="is-revealing">The issue with plastics</h2>
+                <div class="width-limit flex">
+                    <div class="flex-column">
+                        <h2 class="is-revealing">The issue with plastics</h2>
+                    </div>
+                    <div class="flex-column relative-container">
+                        <div class="mol" data-molvwr="test.txt" data-molvwr-format="mol" data-molvwr-view="sticks"></div>
+                    </div>
+                </div>
             </section>
             <section class="full-height grey-bg">
-                <h2 class="is-revealing">Our Goal</h2>
+                <div class="width-limit">
+                    <h2 class="is-revealing">Our Goal</h2>
+                </div>
             </section>
             <section class="full-height">
-                <h2 class="is-revealing">Methods</h2>
+                <div class="width-limit">
+                    <h2 class="is-revealing">Methods</h2>
+                </div>
             </section>
             <section class="full-height grey-bg">
-                <h2 class="is-revealing">Chlamydomonas as environmental bioreactor</h2>
+                <div class="width-limit">
+                    <h2 class="is-revealing">Chlamydomonas as environmental bioreactor</h2>
+                </div>
             </section>
             <section class="full-height">
-                <h2 class="is-revealing">Team</h2>
+                <div class="width-limit">
+                    <h2 class="is-revealing">Team</h2>
 
-                <div class="image-container">
-                    <img id="team" src="dist/images/team.JPG" />
+                    <div class="image-container">
+                        <img id="team" src="dist/images/team.JPG" />
+                    </div>
                 </div>
             </section>
         </div>
@@ -54,5 +73,10 @@
     </div>
 
     <script src="dist/js/main.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            Molvwr.process();
+        });
+    </script>
 </body>
 </html>

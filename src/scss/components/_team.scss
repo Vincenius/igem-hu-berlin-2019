@@ -4,7 +4,7 @@
 
 .image-tag {
     position: absolute;
-    border: 2px solid black; // TODO variable
+    border: 3px solid rgba(255, 255, 255, .25);
     cursor: pointer;
 
     .tag-caption {
@@ -15,7 +15,10 @@
         text-align: center;
     }
 
-    &:hover .tag-caption {
-        display: block;
+    &:hover {
+        border: 3px solid rgba(255, 255, 255, .9);
+        .tag-caption {
+            display: block;
+        }
     }
 }

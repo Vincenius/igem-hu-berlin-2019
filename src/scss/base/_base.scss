@@ -13,6 +13,11 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	font-family: 'Lato', sans-serif;
+	color: $font;
+}
+
+h1, h2 {
+	text-align: center;
 }
 
 ul, ol {
@@ -85,7 +90,15 @@ section {
 }
 
 .full-height {
-	max-width: 1440px;
 	min-height: 100vh;
+	padding: 20px;
+}
+
+.width-limit {
+	max-width: 1440px;
 	margin: 0 auto;
+}
+
+.relative-container {
+	position: relative;
 }
