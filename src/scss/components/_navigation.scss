@@ -1,0 +1,12 @@
+nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 1440px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
