@@ -1,27 +1,35 @@
 .landing-page {
-    .site-header, .grey-bg {
-        background: $lightGrey;
-    }
-
     .site-header {
-        background-image: linear-gradient( 110.9deg,  $greyBlue 1.7%, $lightGrey 98.4% );
         padding: 0 50px;
-
-        video {
-            width: 100%;
-        }
     }
 
     .site-header,
     section {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        z-index: 1;
+    }
+
+    .header-logo {
+        width: auto;
+        max-height: 50vh;
     }
 
     h1 {
         margin: 0;
+        color: #000;
+
+        // todo var
+        @media screen and (max-width: 560px) {
+            font-size: 26px;
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: 22px;
+        }
     }
 
     .flex {
