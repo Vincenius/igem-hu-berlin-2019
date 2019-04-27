@@ -42,7 +42,23 @@
     }
 
     .mol {
+        width: 100%;
         margin-top: 25px;
         cursor: grab;
+    }
+
+    // basic section style
+    .full-height {
+        h2 {
+            display: inline;
+        }
+
+        h2, span {
+            font-size: 52px;
+        }
+
+        span {
+            color: $purple;
+        }
     }
 }

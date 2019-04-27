@@ -170,6 +170,12 @@ var Molvwr;
             this.element.molvwr = this;
             this.canvas = document.createElement("CANVAS");
             this.canvas.setAttribute("touch-action", "manipulation");
+
+            // CUSTOM CODE
+            const canvasHeight = window.innerHeight - 200;
+
+            this.canvas.setAttribute("width", '1440px');
+            this.canvas.setAttribute("height", canvasHeight + 'px')
             this.canvas.style.width = "100%";
             this.canvas.style.height = "100%";
             this.element.appendChild(this.canvas);
