@@ -18,20 +18,6 @@
         max-height: 50vh;
     }
 
-    h1 {
-        margin: 0;
-        color: #000;
-
-        // todo var
-        @media screen and (max-width: 560px) {
-            font-size: 26px;
-        }
-
-        @media screen and (max-width: 400px) {
-            font-size: 22px;
-        }
-    }
-
     .flex {
         display: flex;
         width: 100%;
@@ -47,18 +33,34 @@
         cursor: grab;
     }
 
-    // basic section style
-    .full-height {
-        h2 {
+    .big-text {
+        h1 {
             display: inline;
+            color: $pink;
         }
 
-        h2, span {
+        h1, span {
             font-size: 52px;
+
+            @media screen and (max-width: 1200px) {
+                font-size: 40px;
+            }
+
+            @media screen and (max-width: 900px) {
+                font-size: 28px;
+            }
+
+            @media screen and (max-width: 400px) {
+                font-size: 22px;
+            }
+
+            @media screen and (max-width: 360px) {
+                font-size: 18px;
+            }
         }
 
         span {
-            color: $purple;
+            color: $font;
         }
     }
 }
