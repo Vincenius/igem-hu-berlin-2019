@@ -3,15 +3,35 @@
     padding: 75px 0;
 }
 
+.footer-right {
+    display: flex;
+
+    ul:first-child {
+        margin-right: 20px;
+
+        @media screen and (max-width: 760px) {
+            margin-right: 0;
+        }
+    }
+}
+
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
 
+    @media screen and (max-width: 760px) {
+        flex-direction: column;
+    }
+
     img {
         width: 200px;
         height: 100%;
+
+        @media screen and (max-width: 760px) {
+            margin-bottom: 20px;
+        }
     }
 
     ul {

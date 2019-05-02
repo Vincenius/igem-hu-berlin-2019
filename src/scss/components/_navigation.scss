@@ -40,10 +40,30 @@ nav {
             }
         }
 
+        .devider {
+            display: inline;
+            &::after {
+                content: '|';
+                color: $font;
+                margin: 0 10px;
+            }
+        }
+
         // MOBILE MENU
         @media screen and (max-width: 760px) {
             .menu-items {
                 display: none;
+            }
+
+            .devider {
+                border-top: 1px solid #373535;
+                margin: 0 20px 0 0;
+                height: 1px;
+                width: 100%;
+                
+                &::after {
+                    content: '';
+                }
             }
     
             input, span {
