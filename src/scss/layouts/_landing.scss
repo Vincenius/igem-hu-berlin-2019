@@ -34,12 +34,12 @@
     }
 
     .big-text {
-        h1 {
+        h1, h2 {
             display: inline;
             color: $pink;
         }
 
-        h1, span {
+        h1, h2, span {
             font-size: 52px;
 
             @media screen and (max-width: 1200px) {
@@ -61,6 +61,14 @@
 
         span {
             color: $font;
+        }
+    }
+
+    .image-bg-content {
+        .big-headline {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #fff;
         }
     }
 }
