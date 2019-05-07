@@ -40,5 +40,6 @@ function addTag(c, text, clickEvent) {
 }
 
 // imageContainer.addEventListener('click', getPosition);
-
-addTag([45,57, 53,71], 'Paul', () => { console.log('Test clicked') })
+if (document.getElementById("team") !== null) {
+    addTag([45,57, 53,71], 'Paul', () => { console.log('Test clicked') })
+}

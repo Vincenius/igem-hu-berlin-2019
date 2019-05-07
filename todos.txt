@@ -1,0 +1,2 @@
+- style mobile menu
+- add logic for team image click
