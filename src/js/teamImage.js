@@ -1,4 +1,6 @@
 const imageContainer = document.querySelector('.image-container')
+const showAllButton = document.querySelector('.show-all-members')
+const allTeamMembers = document.querySelectorAll('.team-member')
 
 function addPosition(div, c) {
     div.style.left = c[0] + '%';
@@ -39,7 +41,29 @@ function addTag(c, text, clickEvent) {
     imageContainer.appendChild(div)
 }
 
-// imageContainer.addEventListener('click', getPosition);
+function filterImages(person) {
+    allTeamMembers.forEach(div => {
+        if (div.id === person) {
+            div.classList.remove('hidden')
+            div.scrollIntoView({ left: 0, block: 'start', behavior: 'smooth' });
+        } else {
+            div.classList.add('hidden')
+        }
+    })
+    showAllButton.classList.remove('hidden')
+}
+
+function resetFilter(e) {
+    e.preventDefault()
+    allTeamMembers.forEach(div => {
+        div.classList.remove('hidden')
+    })
+    showAllButton.classList.add('hidden')
+}
+
+imageContainer.addEventListener('click', getPosition);
 if (document.getElementById("team") !== null) {
-    addTag([45,57, 53,71], 'Paul', () => { console.log('Test clicked') })
+    showAllButton.addEventListener('click', resetFilter)
+    addTag([45,57, 53,71], 'Paul', () => { filterImages('paul') })
+    addTag([15,38, 21,49], 'Vincent', () => { filterImages('vincent') })
 }
