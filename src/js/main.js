@@ -21,7 +21,6 @@
   var headerLinks = document.querySelectorAll('.scroll-link', 0);
   addScrollListener(headerLinks)
 
-  console.log(document.getElementById("cells-bg"))
   if (document.getElementById("cells-bg") !== null) {
     VANTA.CELLS({
       el: "#cells-bg",

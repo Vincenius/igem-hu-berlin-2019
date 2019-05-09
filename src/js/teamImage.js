@@ -61,7 +61,7 @@ function resetFilter(e) {
     showAllButton.classList.add('hidden')
 }
 
-imageContainer.addEventListener('click', getPosition);
+// imageContainer.addEventListener('click', getPosition);
 if (document.getElementById("team") !== null) {
     showAllButton.addEventListener('click', resetFilter)
     addTag([45,57, 53,71], 'Paul', () => { filterImages('paul') })
