@@ -31,9 +31,9 @@ function addTag(c, text, clickEvent) {
 
     div.addEventListener('click', clickEvent);
 
-    caption.innerHTML = text
+    /* caption.innerHTML = text
     caption.classList.add('tag-caption')
-    div.appendChild(caption)
+    div.appendChild(caption) */
 
     div.classList.add('image-tag')
     addPosition(div, c)
