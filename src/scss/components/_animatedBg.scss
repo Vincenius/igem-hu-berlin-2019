@@ -1,9 +1,12 @@
 $particleSize: 20vmin;
 $animationDuration: 6s;
-$amount: 20;
+$amount: 40;
 
 .animated-background {
-    background: $purple;
+    background: #093028;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -20,9 +23,9 @@ $amount: 20;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         $colors: (
-            $lightPink,
-            $greyBlue,
-            $lightGreen
+            #008c8c,
+            #003d00,
+            #33691e,
         );
         @for $i from 1 through $amount {
             &:nth-child(#{$i}) {
