@@ -16,5 +16,12 @@ pipeline {
         sh './node_modules/pm2/bin/pm2 start server.js'
       }
     }
+	stage('Deliver') { 
+      steps {
+        sh './jenkins/scripts/deliver.sh' 
+        input message: 'Finished using the web site? (Click "Proceed" to continue)' 
+        sh './jenkins/scripts/kill.sh' 
+      }
+    }
   }
 }
