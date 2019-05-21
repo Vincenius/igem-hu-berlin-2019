@@ -4,7 +4,9 @@ pipeline {
       image 'node:10'
       args '-p 4007:4007'
     }
-
+  }
+  environment {
+    HOME = '.'
   }
   stages {
     stage('build') {
