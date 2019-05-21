@@ -13,7 +13,7 @@ pipeline {
       steps {
         sh 'npm i'
         sh 'npm run build'
-        sh 'pm2 start server.js'
+        sh './node_modules/pm2/bin/pm2 start server.js'
       }
     }
   }
