@@ -21,12 +21,12 @@
     "build:images": "run-s imagemin",
     "build:fonts": "cpx 'src/fonts/*' 'dist/fonts'",
     "build": "run-s build:*",
+    "start": "node server.js"
     "watch:css": "onchange \"src/scss\" -- run-s build:css",
     "watch:js": "onchange \"src/js\" -- run-s build:js",
     "watch:images": "onchange \"src/images\" -- run-s build:images",
     "watch:fonts": "onchange \"src/fonts\" -- run-s build:fonts",
     "watch": "run-p serve watch:*",
-    "postinstall": "run-s build watch"
   },
   "devDependencies": {
     "autoprefixer": "^9.0.1",
