@@ -13,7 +13,7 @@ pipeline {
       steps {
         sh 'npm i'
         sh 'npm run build'
-        sh 'node server.js'
+        sh 'npm run start'
       }
     }
   }
