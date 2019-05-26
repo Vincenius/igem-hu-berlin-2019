@@ -64,6 +64,6 @@ function resetFilter(e) {
 // imageContainer.addEventListener('click', getPosition);
 if (document.getElementById("team") !== null) {
     showAllButton.addEventListener('click', resetFilter)
-    addTag([45,47, 52,62], 'Paul', () => { filterImages('paul') })
-    addTag([15,26, 21,38], 'Vincent', () => { filterImages('vincent') })
+    addTag([45,49, 52,66], 'Paul', () => { filterImages('paul') })
+    addTag([15,27, 21,40], 'Vincent', () => { filterImages('vincent') })
 }
