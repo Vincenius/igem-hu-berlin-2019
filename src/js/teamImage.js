@@ -61,9 +61,14 @@ function resetFilter(e) {
     showAllButton.classList.add('hidden')
 }
 
-// imageContainer.addEventListener('click', getPosition);
+imageContainer.addEventListener('click', getPosition);
 if (document.getElementById("team") !== null) {
     showAllButton.addEventListener('click', resetFilter)
     addTag([45,49, 52,66], 'Paul', () => { filterImages('paul') })
     addTag([15,27, 21,40], 'Vincent', () => { filterImages('vincent') })
+    addTag([70,25, 77,38], 'Johannes', () => { filterImages('johannes') })
+    addTag([3,39, 10,52], 'Juli', () => { filterImages('juli') })
+    addTag([54,21, 61,35], 'Luise', () => { filterImages('luise') })
+    addTag([32,22, 38,32], 'Marc', () => { filterImages('marc') })
+    addTag([25,27, 31,39], 'Sandra', () => { filterImages('sandra') })
 }
