@@ -28,6 +28,10 @@ nav {
         font-weight: bold;
         text-decoration: none;
         font-size: 18px;
+
+        &.active {
+            color: $primary;
+        }
     }
 
     .nav-right {
