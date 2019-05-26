@@ -10,7 +10,7 @@ nav {
 
     .nav-logo {
         display: inline-block;
-        width: 40px;
+        width: 2.5em;
         height: auto;
         margin-right: 10px
     }
@@ -33,8 +33,30 @@ nav {
     .nav-right {
         position: relative;
 
-        input, span {
+        input, span, .submenu {
             display: none;
+        }
+
+        .item {
+            position: relative;
+            display: inline-block;
+
+            &:hover {
+                .submenu {
+                    display: block;
+                    position: absolute;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    background-color: $lightGreen;
+                    padding: 10px;
+                    
+                    a {
+                        white-space: nowrap;
+                        white-space: pre;
+                        margin: 10px;
+                        display: block;
+                    }
+                }
+            }
         }
 
         a {
