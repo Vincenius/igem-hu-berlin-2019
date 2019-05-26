@@ -91,6 +91,15 @@
         }
     }
 
+    .purple-underline {
+        .big-headline {
+            border-bottom: 10px solid $purple;
+        }
+        .image-links a:hover {
+            border-bottom: 6px solid $purple;
+        }
+    }
+
     .image-bg-content {
         position: relative;
         display: flex;

@@ -16,10 +16,12 @@
 .image-bg-content {
 	position: relative;
 	z-index: 1;
+	min-height: 550px;
 }
 
 .full-height {
-	min-height: 100vh;
+	height: 100vh;
+	min-height: 550px;
 	padding: 20px;
 }
 
