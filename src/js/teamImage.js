@@ -1,4 +1,4 @@
-const imageContainer = document.querySelector('.image-container')
+const imageContainer = document.querySelector('.image-bg')
 const showAllButton = document.querySelector('.show-all-members')
 const allTeamMembers = document.querySelectorAll('.team-member')
 
@@ -64,6 +64,6 @@ function resetFilter(e) {
 // imageContainer.addEventListener('click', getPosition);
 if (document.getElementById("team") !== null) {
     showAllButton.addEventListener('click', resetFilter)
-    addTag([45,57, 53,71], 'Paul', () => { filterImages('paul') })
-    addTag([15,38, 21,49], 'Vincent', () => { filterImages('vincent') })
+    addTag([45,47, 52,62], 'Paul', () => { filterImages('paul') })
+    addTag([15,26, 21,38], 'Vincent', () => { filterImages('vincent') })
 }

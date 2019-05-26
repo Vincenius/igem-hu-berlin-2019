@@ -1,11 +1,25 @@
 .team-headline {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 1;
     font-size: 52px;
     text-align: left;
     text-transform: uppercase;
+    border-bottom: 10px solid $lightGreen;
+    font-weight: bold;
+
+    @media screen and (max-width: 1023px) {
+        font-size: 40px;
+        border-bottom: 8px solid #a2dfba;
+    }
 }
 
-.team-image {
+.container .team-image {
     margin: 0 auto;
+    filter: none;
+    object-fit: contain;
+    height: auto;
 }
 
 .team-member {
