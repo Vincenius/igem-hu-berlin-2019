@@ -1,3 +1,7 @@
+#top_title {
+	display: none !important;
+}
+
 .grey-bg {
 	background: $greyBlue;
 }
@@ -48,4 +52,13 @@
 
 .ar16-9 {
 	padding: 56.25% 0 0;
+}
+
+.ar100vh {
+	padding: 100vh 0 0;
+}
+
+.block-text {
+	display: block;
+	text-align: justify;
 }

@@ -1,58 +1,36 @@
 (function () {
-  const doc = document.documentElement
-
-  doc.classList.remove('no-js')
-  doc.classList.add('js')
-
-  // Reveal animations
-  if (document.body.classList.contains('has-animations')) {
-    /* global ScrollReveal */
-    const sr = window.sr = ScrollReveal()
-
-    sr.reveal('.is-revealing', {
-      duration: 1000,
-      distance: '40px',
-      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
-      origin: 'bottom',
-      interval: 150
-    })
+  const noJs = document.querySelector('.no-js')
+  if (noJs) {
+    noJs.classList.add('js')
+    noJs.classList.remove('no-js')
   }
-
-  var headerLinks = document.querySelectorAll('.scroll-link', 0);
-  addScrollListener(headerLinks)
 }())
 
-function addScrollListener(elements) {
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener("click", function(e) {
-      e.preventDefault()
+window.addEventListener("scroll", function () {
+  const elements = document.querySelectorAll('.is-revealing');
+  [].forEach.call(elements, function(el) {
+    if (isElementVisible(el)) {
+      el.classList.add('is-revealing-visible')
+    }
+  });
+});
 
-      var id = this.getAttribute('data-link');
-      var target = document.getElementById(id)
-      animate(document.scrollingElement || document.documentElement, "scrollTop", "", 0, target.offsetTop, 300, true);
-    }, false);
-  }
-}
+function isElementVisible(el) {
+  var rect     = el.getBoundingClientRect(),
+      vWidth   = window.innerWidth || doc.documentElement.clientWidth,
+      vHeight  = window.innerHeight || doc.documentElement.clientHeight,
+      efp      = function (x, y) { return document.elementFromPoint(x, y) };     
 
-function animate(elem, style, unit, from, to, time, prop) {
-  if (!elem) {
-      return;
-  }
-  var start = new Date().getTime(),
-      timer = setInterval(function () {
-          var step = Math.min(1, (new Date().getTime() - start) / time);
-          if (prop) {
-              elem[style] = (from + step * (to - from))+unit;
-          } else {
-              elem.style[style] = (from + step * (to - from))+unit;
-          }
-          if (step === 1) {
-              clearInterval(timer);
-          }
-      }, 25);
-  if (prop) {
-        elem[style] = from+unit;
-  } else {
-        elem.style[style] = from+unit;
-  }
+  // Return false if it's not in the viewport
+  if (rect.right < 0 || rect.bottom < 0 
+          || rect.left > vWidth || rect.top > vHeight)
+      return false;
+
+  // Return true if any of its four corners are visible
+  return (
+        el.contains(efp(rect.left,  rect.top))
+    ||  el.contains(efp(rect.right, rect.top))
+    ||  el.contains(efp(rect.right, rect.bottom))
+    ||  el.contains(efp(rect.left,  rect.bottom))
+  );
 }

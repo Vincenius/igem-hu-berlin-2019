@@ -1,2 +1,3 @@
 - style mobile menu
-- rename stuff to have "T--Humboldt_Berlin--" prefix
+- Fix local / server to Link Pages - https://2019.igem.org/wiki/index.php?title=Special%3AAllPages&from=Team%3AHumboldt_Berlin&to=&namespace=0
+- create modules for detail pages

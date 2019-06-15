@@ -1,27 +1,31 @@
 
-@import "fonts/lato";
+    @import "fonts/lato";
+    @import "variables";
+    @import "base/root";
 
-@import "variables";
-@import "normalize";
+#content {
+    @import "normalize";
 
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-@import "base/base";
-@import "base/general";
-@import "base/helpers";
+    /*--------------------------------------------------------------
+    # Base
+    --------------------------------------------------------------*/
+    @import "base/base";
+    @import "base/general";
+    @import "base/helpers";
 
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-@import "components/scrollHint";
-@import "components/team";
-@import "components/navigation";
-@import "components/footer";
-@import "components/animatedBg";
+    /*--------------------------------------------------------------
+    # Components
+    --------------------------------------------------------------*/
+    @import "components/scrollHint";
+    @import "components/team";
+    @import "components/navigation";
+    @import "components/footer";
+    @import "components/animatedBg";
 
-/*--------------------------------------------------------------
-# Layouts
---------------------------------------------------------------*/
-@import "layouts/landing";
-@import "layouts/team";
+    /*--------------------------------------------------------------
+    # Layouts
+    --------------------------------------------------------------*/
+    @import "layouts/landing";
+    @import "layouts/team";
+    @import "layouts/pages";
+}

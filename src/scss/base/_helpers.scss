@@ -1,8 +1,18 @@
 /* Reveal animations */
-.sr {
-	.has-animations {
-		.is-revealing {
-			visibility: hidden;
-		}
+.js {
+	.is-revealing {
+		display: block;
+		opacity: 0;
+		transform: translateY(100px);
+
+		-webkit-transition: 0.8s ease-in-out;
+		-moz-transition: 0.8s ease-in-out;
+		-o-transition: 0.8s ease-in-out;
+		transition: 0.8s ease-in-out;
+	}
+
+	.is-revealing-visible {
+		opacity: 1;
+		transform: none;
 	}
 }

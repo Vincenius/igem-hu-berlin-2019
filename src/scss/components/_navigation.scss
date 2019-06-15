@@ -45,7 +45,7 @@ nav {
             position: relative;
             display: inline-block;
 
-            &:hover {
+            &:hover, {
                 .submenu {
                     display: block;
                     position: absolute;
@@ -86,6 +86,17 @@ nav {
 
         // MOBILE MENU
         @media screen and (max-width: 1023px) {
+            .item .submenu, .item:hover .submenu {
+                display: block;
+                position: relative;
+                padding: 0 0 0 30px;
+                box-shadow: none;
+
+                a {
+                    margin: 20px 15px;
+                }
+            }
+
             .menu-items {
                 display: none;
             }
@@ -154,13 +165,15 @@ nav {
                     transform: rotate(-45deg) translate(0, -1px);
                 }
                 ~ .menu-items {
-                    display: block;
-                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    position: fixed;
                     padding: 0 10px;
-                    right: -20px;
-                    text-align: right;
-                    margin-top: 30px;
+                    left: 0;
+                    text-align: left;
+                    margin-top: 26px;
                     background: $lightGreen;
+                    width: 100%;
 
                     a {
                         display: block;
