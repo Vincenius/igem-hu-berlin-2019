@@ -154,6 +154,10 @@ p.medium-sized {
     justify-content: center;
     align-items: flex-start;
 
+    @media screen and (max-width: 760px) {
+        flex-direction: column;
+    }
+
     a {
         display: block;
         width: 30%;
@@ -162,9 +166,23 @@ p.medium-sized {
         margin: 5px;
         text-decoration: none;
 
+        @media screen and (max-width: 1023px) {
+            width: 50%;
+        }
+
+        @media screen and (max-width: 760px) {
+            width: calc(100% - 40px);
+            margin: 20px;
+        }
+
         &:last-child {
             margin-top: 100px;
             padding-top: 200px;
+
+            @media screen and (max-width: 760px) {
+                margin-top: 0;
+                padding-top: 300px;
+            }
         }
     }
 
@@ -175,6 +193,7 @@ p.medium-sized {
         display: inline-block;
         padding-left: 10px;
         margin-bottom: 5px;
+        padding-bottom: 15px;
     }
 
     p {
