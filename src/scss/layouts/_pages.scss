@@ -1,3 +1,29 @@
+.fixed-header-container {
+    position: relative;
+}
+
+.fixed-image-header {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.fixed-header-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 100vh;
+}
+
 .page-headline {
     position: absolute;
     bottom: 5vh;
@@ -33,7 +59,7 @@
 
 .two-columns {
     display: flex;
-    margin: 60px 0;
+    margin: 120px 0;
 
     > * {
         width: 100%;
@@ -41,15 +67,28 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @media screen and (max-width: 760px) {
+            margin-bottom: 40px;
+        }
     }
 
     &.not-centered > * {
         justify-content: flex-start;
     }
 
+    &.no-margin-top {
+        margin-top: 0;
+    }
+
     @media screen and (max-width: 760px) {
         flex-direction: column;
     }
+}
+
+.two-columns-headline {
+    margin: 120px 0 15px;
+    padding: 0 5%;
 }
 
 .medium-sized p,
@@ -64,18 +103,18 @@ p.medium-sized {
 .quote {
     display: flex;
     max-width: 1000px;
-    margin: 50px auto;
+    margin: 60px auto 150px;
     padding: 0 50px;
 
     img {
         object-fit: contain;
     }
 
-    &.image-left img {
+    &.image-left .quote-image-container {
         margin-right: 40px;
     }
 
-    &.image-right img {
+    &.image-right .quote-image-container {
         margin-left: 40px;
     }
 

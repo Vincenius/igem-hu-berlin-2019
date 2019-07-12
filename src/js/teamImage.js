@@ -64,6 +64,7 @@ function resetFilter(e) {
 imageContainer.addEventListener('click', getPosition);
 if (document.getElementById("team") !== null) {
     showAllButton.addEventListener('click', resetFilter)
+    // coordinates are [Left Start, Top Start, Left End, Top End]
     addTag([45,49, 52,66], 'Paul', () => { filterImages('paul') })
     addTag([15,27, 21,40], 'Vincent', () => { filterImages('vincent') })
     addTag([70,25, 77,38], 'Johannes', () => { filterImages('johannes') })
@@ -71,4 +72,12 @@ if (document.getElementById("team") !== null) {
     addTag([54,21, 61,35], 'Luise', () => { filterImages('luise') })
     addTag([32,22, 38,32], 'Marc', () => { filterImages('marc') })
     addTag([25,27, 31,39], 'Sandra', () => { filterImages('sandra') })
+    addTag([26,14, 32,26], 'Andrej', () => { filterImages('andrej') })
+    addTag([37,26, 42,38], 'Fabienne', () => { filterImages('fabienne') })
+    addTag([46,25, 52,37], 'Saskia', () => { filterImages('saskia') })
+    addTag([65,19, 70,31], 'Patrick', () => { filterImages('patrick') })
+    addTag([85,20, 92,34], 'Sophia', () => { filterImages('sophia') })
+    addTag([46,6, 52,18], 'Darius', () => { filterImages('darius') })
+    addTag([64,31, 70,43], 'Alejandro', () => { filterImages('alejandro') })
+    addTag([77,23, 82,36], 'Elena', () => { filterImages('elena') })
 }

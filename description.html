@@ -93,17 +93,20 @@
             </div>
         </nav>
 
-        <section class="image-bg relative-container ar100vh no-filter">
+        <div class="fixed-header-container">
+            <section class="fixed-image-header">
+                <img src="https://2019.igem.org/wiki/images/e/e9/T--Humboldt_Berlin--description-header.jpg" alt="notebook" />
+            </section>
+            
             <h1 class="page-headline description">Description</h1>
-            <img src="https://2019.igem.org/wiki/images/e/e9/T--Humboldt_Berlin--description-header.jpg" alt="notebook" />
-        </section>
+        </div>
 
-        <section class="page-content">
+        <section class="page-content fixed-header-content">
             <h2 class="page-subheadline">How & why</h2>
             <div class="width-limit">
                 <div class="two-columns">
                     <div>
-                        <img src="https://2019.igem.org/wiki/images/5/54/T--Humboldt_Berlin--ideonella_grafik.png" alt="ideonella grafic" />
+                        <img class="is-revealing" src="https://2019.igem.org/wiki/images/5/54/T--Humboldt_Berlin--ideonella_grafik.png" alt="ideonella grafic" />
                     </div>
                     <div>
                         <!----------------------------------------------------------------------->
@@ -130,7 +133,9 @@
                 </div>
 
                 <blockquote class="quote image-left">
-                    <img src="https://2019.igem.org/wiki/images/2/2d/T--Humboldt_Berlin--flasche_igem.png" alt="plastic bottle illustration" />
+                    <div class="quote-image-container">
+                        <img src="https://2019.igem.org/wiki/images/2/2d/T--Humboldt_Berlin--flasche_igem.png" alt="plastic bottle illustration" />
+                    </div>
                     <div class="block-text big-underline big-text">
                         <!----------------------------------------------------------------------->
                         <!----------------------------  WE KNOW ...  ---------------------------->
@@ -166,13 +171,13 @@
                         </p>
                     </div>
                     <div>
-                        <img src="https://2019.igem.org/wiki/images/b/bc/T--Humboldt_Berlin--microplastic_icon.png" alt="microplastic icon" />
+                        <img class="is-revealing" src="https://2019.igem.org/wiki/images/b/bc/T--Humboldt_Berlin--microplastic_icon.png" alt="microplastic icon" />
                     </div>
                 </div>
 
                 <div class="two-columns">
                     <div>
-                        <img src="https://2019.igem.org/wiki/images/c/c5/T--Humboldt_Berlin--chlamy_organism.png" alt="chlamy organism" />
+                        <img class="is-revealing" src="https://2019.igem.org/wiki/images/c/c5/T--Humboldt_Berlin--chlamy_organism.png" alt="chlamy organism" />
                     </div>
                     <div>
                         <!----------------------------------------------------------------------->
@@ -211,12 +216,14 @@
                     <img class="small-image" src="https://2019.igem.org/wiki/images/2/23/T--Humboldt_Berlin--chlamy_nur_so.png" alt="chlamy" />
                 </blockquote>
 
-                <div class="two-columns block-text medium-sized not-centered">
-                    <!----------------------------------------------------------------------->
-                    <!--------------------- GOLDEN GATE MODULAR CLONING --------------------->
-                    <!----------------------------------------------------------------------->
+                <!----------------------------------------------------------------------->
+                <!--------------------- GOLDEN GATE MODULAR CLONING --------------------->
+                <!----------------------------------------------------------------------->
+                <div class="two-columns-headline">
+                    <h3 class="headline3">Golden Gate Modular Cloning for Chlamydomonas reinhardtii</h3>
+                </div>
+                <div class="two-columns block-text medium-sized not-centered no-margin-top">
                     <div>
-                        <h3 class="headline3">Golden Gate Modular Cloning for Chlamydomonas reinhardtii</h3>
                         <p>
                             To synthesize and assemble all the needed gene constructs to let Chlamydomonas
                             express the PETase and MHETase together with different promotors, terminators,
@@ -237,7 +244,7 @@
                             to build different overhangs making an assembly of multiple fragments possible
                             (Weber et al., 2011).
                         </p>
-
+                        <br />
                         <img src="https://2019.igem.org/wiki/images/4/42/T--Humboldt_Berlin--chlamy_overview-cloning-system.png" alt="Pverview of the hierarchical and modular cloning system"/>
                         <p>
                             <b>Fig. 1</b><i> Overview of the hierarchical and modular cloning system (Weber et
@@ -277,6 +284,7 @@
                             function and altogether its position in a L1 plasmid (Tab. 1).
                         </p>
 
+                        <br />
                         <span>
                             <b>Tab. 1</b><i> MoClo L0 to L1 cloning; L1 fusion sites
                             establishing a complete transcriptional unit (TU).</i>
@@ -326,7 +334,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <div class="footer-container">
@@ -376,6 +384,35 @@
         </footer>
     </div>
 
-    <script src="dist/js/main.min.js"></script>
+    <script>
+        (function () {
+            document.querySelector('.no-js').classList.add('js')
+            document.querySelector('.no-js').classList.remove('no-js')
+        }())
+        
+        window.addEventListener("scroll", function () {
+            const elements = document.querySelectorAll('.is-revealing');
+        
+            [].forEach.call(elements, function(el) {
+            if (isElementVisible(el)) {
+                el.classList.add('is-revealing-visible')
+            }
+            });
+        });
+        
+        function isElementVisible(el) {
+            var top = el.offsetTop;
+            var height = el.offsetHeight;
+        
+            while(el.offsetParent) {
+            el = el.offsetParent;
+            top += el.offsetTop;
+            }
+        
+            return (
+            (top + height) <= (window.pageYOffset + window.innerHeight) + 100
+            );
+        }
+    </script>
 </body>
 </html>
