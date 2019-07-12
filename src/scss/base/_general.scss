@@ -32,6 +32,8 @@
 .width-limit {
 	max-width: 1440px;
 	margin: 0 auto;
+	position: relative;
+    z-index: 2;
 }
 
 .relative-container {

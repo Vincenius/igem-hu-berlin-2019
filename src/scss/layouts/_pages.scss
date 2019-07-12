@@ -142,6 +142,50 @@ p.medium-sized {
     }
 }
 
+.learn-more {
+    h3 {
+        font-size: 32px;
+        text-align: center;
+    }
+}
+
+.learn-more-links {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    a {
+        display: block;
+        width: 30%;
+        padding: 300px 0 50px;
+        background: lightgrey;
+        margin: 5px;
+        text-decoration: none;
+
+        &:last-child {
+            margin-top: 100px;
+            padding-top: 200px;
+        }
+    }
+
+    h4 {
+        font-size: 45px;
+        color: #000;
+        border-bottom: 10px solid $greyBlue;
+        display: inline-block;
+        padding-left: 10px;
+        margin-bottom: 5px;
+    }
+
+    p {
+        background: #000;
+        opacity: 0.5;
+        color: #fff;
+        padding: 5px 10px;
+        font-size: 24px;
+    }
+}
+
 .big-underline {
     border-bottom: 30px solid $greyBlue;
 }
@@ -149,4 +193,6 @@ p.medium-sized {
 .greyblue-devider {
     width: 100%;
     border-bottom: 5px solid $greyBlue;
+    position: relative;
+    z-index: 2;
 }
