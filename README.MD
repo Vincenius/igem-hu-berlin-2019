@@ -1,6 +1,6 @@
 # iGem Website for HU-Berlin 2019
 
-[Demo](https://igem.vincentwill.de)
+[Demo](https://2019.igem.org)
 
 ### Setup
 Have NodeJs installed - [https://nodejs.org/en/](https://nodejs.org/en/)
