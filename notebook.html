@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="content">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="dist/css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="dist/images/favicon.png">
 </head>
-<body class="has-animations landing-page">
+<body class="has-animations">
     <div class="container">
         <nav>
             <div class="width-limit nav-content">
@@ -89,8 +89,16 @@
             </div>
         </nav>
 
-        <section class="full-height width-limit">
-            <h2>This page does not exist yet.</h2>
+        <section class="full-height width-limit notebook">
+            <div class="timeline">
+                <div class="timeline-month">Januar</div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-month">Februar</div>
+                <div class="timeline-month">März</div>
+            </div>
+            <div class="infobox">
+                infobox
+            </div>
         </section>
     </main>
 
@@ -146,6 +154,84 @@
         </footer>
     </div>
 
-    <script src="dist/js/main.min.js"></script>
+
+    <div class="footer-container">
+        <footer class="width-limit">
+            <img src="https://2019.igem.org/wiki/images/e/ee/T--Humboldt_Berlin--logo_black.png" class="footer-logo" alt="Chlamylicious Logo Black" />
+            <div class="footer-right">
+                <ul>
+                    <li>
+                        <a href="/Team:Humboldt_Berlin">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Team:Humboldt_Berlin/Team">
+                            Team
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Team:Humboldt_Berlin/Description">
+                            Project
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="/Team:Humboldt_Berlin/Parts">
+                            Parts
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Team:Humboldt_Berlin/Safety">
+                            Safety
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Team:Humboldt_Berlin/Human_Practices">
+                            Human Practices
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://igem.org/2019_Judging_Form?team=Humboldt_Berlin">
+                            For Judges
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const infobox = document.querySelector('.infobox');
+        window.addEventListener("scroll", function () {
+            const elements = document.querySelectorAll('.timeline > div');
+        
+            [].forEach.call(elements, function(el) {
+                if (isElementVisible(el)) {
+                    el.classList.add('active-timeline-el')
+                } else {
+                    el.classList.remove('active-timeline-el')
+                }
+            });
+
+            const activeElements = document.querySelectorAll('.active-timeline-el');
+            const lastActive = activeElements[activeElements.length - 1]
+            infobox.innerHTML = lastActive.innerHTML
+        });
+        
+        function isElementVisible(el) {
+            var top = el.offsetTop;
+        
+            while(el.offsetParent) {
+                el = el.offsetParent;
+                top += el.offsetTop;
+            }
+        
+            return (
+                top <= window.pageYOffset + 195
+            );
+        }
+    </script>
 </body>
 </html>

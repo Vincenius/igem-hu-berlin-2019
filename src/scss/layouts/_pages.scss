@@ -128,17 +128,22 @@ p.medium-sized {
         margin: 0;
         display: inline-block;
     }
+}
 
-    .big-text p {
-        font-size: 32px;
+.big-text b {
+    line-height: 1.188em;
+}
 
-        @media screen and (max-width: 760px) {
-            font-size: 24px;
-        }
+.big-text p,
+.big-text b {
+    font-size: 32px;
 
-        @media screen and (max-width: 420px) {
-            font-size: 18px;
-        }
+    @media screen and (max-width: 760px) {
+        font-size: 24px;
+    }
+
+    @media screen and (max-width: 420px) {
+        font-size: 18px;
     }
 }
 
@@ -162,6 +167,7 @@ p.medium-sized {
         top: 0;
         left: 0;
         height: 100%;
+        width: 100%;
         object-fit: cover;
     }
 
@@ -186,12 +192,12 @@ p.medium-sized {
         border-bottom: 15px solid $greyBlue;
         display: inline-block;
         margin-bottom: 5px;
-        padding: 0 50px 15px;
+        padding: 15px 50px;
 
         @media screen and (max-width: 760px) {
             font-size: 30px;
             border-bottom: 10px solid $greyBlue;
-            padding: 0 20px 15px;
+            padding: 15px 20px;
         }
     }
 

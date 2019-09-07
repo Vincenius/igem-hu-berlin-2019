@@ -1,0 +1,29 @@
+.plus::before,
+.minus::before {
+    position: absolute;
+    transform: translateX(-100%);
+    margin-left: -5px;
+}
+
+.plus::before {
+    content: "+";
+}
+
+.minus::before {
+    content: "-";
+    margin-left: -10px;
+}
+
+.big-border-left {
+    border-left: 80px solid $greyBlue;
+    margin: 0;
+    padding: 60px 0;
+
+    .image-column {
+        display: flex;
+        align-items: center;
+    }
+    img {
+        max-width: 250px;
+    }
+}
