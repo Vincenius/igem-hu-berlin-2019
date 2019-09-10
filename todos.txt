@@ -1,3 +1,5 @@
-- style mobile menu
-- Fix local / server to Link Pages - https://2019.igem.org/wiki/index.php?title=Special%3AAllPages&from=Team%3AHumboldt_Berlin&to=&namespace=0
-- create modules for detail pages
+- Notebook Seite
+- interaktive Grafik
+- Neues Element Experiments Seite
+    - Verlinkung zu einzelnen Drop-Down Menü möglich
+- Bild mit Bildunterschrift

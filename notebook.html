@@ -89,71 +89,37 @@
             </div>
         </nav>
 
-        <section class="full-height width-limit notebook">
+        <div class="fixed-header-container">
+            <section class="fixed-image-header">
+                <img src="https://2019.igem.org/wiki/images/e/e9/T--Humboldt_Berlin--description-header.jpg" alt="notebook" />
+            </section>
+
+            <h1 class="page-headline description">Notebook</h1>
+        </div>
+
+        <section class="full-height width-limit notebook fixed-header-content">
             <div class="timeline">
-                <div class="timeline-month">Januar</div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-month">Februar</div>
-                <div class="timeline-month">März</div>
+                <div class="timeline-month tl-first-element"
+                    data-text="Information for january">
+                    January
+                </div>
+                <div class="timeline-dot"
+                    data-text="information for inbetween">
+                </div>
+                <div class="timeline-month"
+                    data-text="Information for february">
+                    February
+                </div>
+                <div class="timeline-month"
+                    data-text="Information for march">
+                    March
+                </div>
             </div>
             <div class="infobox">
                 infobox
             </div>
         </section>
     </main>
-
-    <div class="footer-container">
-        <footer class="width-limit">
-            <img src="dist/images/T--Humboldt_Berlin--logo_black.png" class="footer-logo" alt="Chlamylicious Logo Black" />
-            <div class="footer-right">
-                <ul>
-                    <li>
-                        <a href="/">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/team.html">
-                            Team
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/project.html">
-                            Project
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/parts.html">
-                            Parts
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="/safety.html">
-                            Safety
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/human_practices.html">
-                            Human Practices
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/awards.html">
-                            Awards
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/for_judges.html">
-                            For Judges
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-    </div>
-
 
     <div class="footer-container">
         <footer class="width-limit">
@@ -205,8 +171,22 @@
     <script>
         const infobox = document.querySelector('.infobox');
         window.addEventListener("scroll", function () {
+            updateTimeline();
+            setFixedElements();
+        });
+
+        function setFixedElements() {
+            const infobox = document.querySelector('.infobox');
+            if (window.pageYOffset >= window.innerHeight) {
+                infobox.classList.add('fixed')
+            } else {
+                infobox.classList.remove('fixed')
+            }
+        }
+
+        function updateTimeline() {
             const elements = document.querySelectorAll('.timeline > div');
-        
+
             [].forEach.call(elements, function(el) {
                 if (isElementVisible(el)) {
                     el.classList.add('active-timeline-el')
@@ -217,19 +197,23 @@
 
             const activeElements = document.querySelectorAll('.active-timeline-el');
             const lastActive = activeElements[activeElements.length - 1]
-            infobox.innerHTML = lastActive.innerHTML
-        });
-        
+
+            if (lastActive !== undefined) {
+                infobox.innerHTML = lastActive.getAttribute('data-text')
+            }
+        }
+
+        // rename?
         function isElementVisible(el) {
             var top = el.offsetTop;
-        
+
             while(el.offsetParent) {
                 el = el.offsetParent;
                 top += el.offsetTop;
             }
-        
+
             return (
-                top <= window.pageYOffset + 195
+                top <= window.pageYOffset
             );
         }
     </script>
