@@ -1,11 +1,12 @@
 .notebook {
     height: 100%;
     padding-top: 100px;
+    background: #fff;
 }
 
 .infobox {
     position: absolute;
-    top: 150px;
+    top: 50px;
     left: 200px;
     min-width: 200px;
     padding: 50px 0 50px 50px;
@@ -13,6 +14,11 @@
 
     &.fixed {
         position: fixed;
+        top: 150px;
+
+        @media screen and (min-width: 1440px) {
+            left: calc((100vw / 2) - 720px + 200px);
+        }
     }
 
     &::before {
