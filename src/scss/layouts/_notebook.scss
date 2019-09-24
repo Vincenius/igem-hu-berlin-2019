@@ -2,6 +2,7 @@
     height: 100%;
     padding-top: 100px;
     background: #fff;
+    z-index: 3;
 }
 
 .infobox {
@@ -9,13 +10,22 @@
     top: 50px;
     left: 200px;
     min-width: 200px;
+    max-width: 600px;
+    width: calc(100% - 250px);
     padding: 50px;
     border: 5px solid $lightBlue;
+    background: #fff;
+
+    h2 {
+        text-align: left;
+    }
 
     &.fixed {
         position: fixed;
+        z-index: 3;
         top: 150px;
         left: 220px;
+        width: calc(100% - 290px);
 
         @media screen and (min-width: 1440px) {
             left: calc((100vw / 2) - 720px + 200px);
@@ -49,19 +59,32 @@
     }
 }
 
+.infobox-date {
+    margin: 0;
+}
+
+.infobox-image {
+    width: 100%;
+    height: auto;
+
+    &.no-image {
+        display: none;
+    }
+}
+
 .timeline {
     position: relative;
     border-left: 5px solid #000;
     margin-left: 30px;
     margin-top: -65px;
-    padding-bottom: 250px;
+    padding-bottom: 300px;
 
     .tl-first-element {
         padding: 95px 10px;
     }
 
     > div {
-        padding: 200px 10px;
+        padding: 100px 10px;
         display: flex;
         align-items: center;
     }

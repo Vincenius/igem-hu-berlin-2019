@@ -100,23 +100,42 @@
             <section class="width-limit">
                 <div class="timeline">
                     <div class="timeline-month tl-first-element"
-                        data-text="Information for january">
-                        January
+                        data-text="- Learning MoClo/Golden Gate Design <br>
+                        - Research on PETase degradation <br>
+                        - Planning construction design for Golden Gate cloning using 10 different fusion sites according to Patron <br>
+                        - Designing Primers for C. reinhardtii specified promotor PsaD containing BpiI recognition site with MoClo fusion sites and fusion sites compatible for L0 backbone. Primers containing mutation to delete BpiI site (Primer 5,6,11-13)."
+                        data-date="10/08 - 10/14">
+                        October <br> 2018
                     </div>
                     <div class="timeline-dot"
-                        data-text="information for inbetween">
+                        data-text="- Research on C. reinhardtii cultivation <br>
+                        <h2>YFP</h2>
+                        - Designing Primers for YFP with B5-B5 fusion sites taken from AG Hegemann plasmid p135 (Primer 7+8)"
+                        data-date="10/15 - 10/21">
+                    </div>
+                    <div class="timeline-dot"
+                        data-text="- Searching for gene templates <br>
+                        <h2>chemical competent DH10B</h2>
+                        - production of chemical competent E. coli DH10B cells <br>
+                        - PCR for YFP B5-B5 with primer 7+8"
+                        data-date="10/22 - 10/28">
                     </div>
                     <div class="timeline-month"
-                        data-text="Information for february">
-                        February
-                    </div>
-                    <div class="timeline-month"
-                        data-text="Information for march">
-                        March
+                        data-text="<h2>chemical competent DH10B</h2>
+                        - checking the chemical competent DH10B cells → Transformation of plasmid containing RFP (Plasmid: pP51) (result/picture: red colonies grew → cells are competent! no cells on negative control)
+                        <h2>ARS</h2>
+                        - Design of Arylsulfatase 1 (ARS) secretion signal as a B2-B2 part
+                        <h2>GLE</h2>
+                        - Design of Gametolysin (GLE) secretion signal as a B2-B2 part"
+                        data-date="10/29 - 11/04"
+                        data-image="https://2019.igem.org/wiki/images/1/17/T--Humboldt_Berlin--Notebook-10-29.png">
+                        November
                     </div>
                 </div>
                 <div class="infobox">
-                    infobox
+                    <h3 class="infobox-date"></h3>
+                    <img src="" alt="" class="infobox-image no-image"/>
+                    <p class="infobox-text"></p>
                 </div>
             </section>
         </div>
@@ -170,14 +189,22 @@
     </div>
 
     <script>
-        const infobox = document.querySelector('.infobox');
+        var elementOffset = 100;
+        var infobox = document.querySelector('.infobox');
+        var infoboxText = document.querySelector('.infobox-text');
+        var infoboxDate = document.querySelector('.infobox-date');
+        var infoboxImage = document.querySelector('.infobox-image');
+        var firstElement = document.querySelectorAll('.timeline > div')[0]
+
+        infoboxText.innerHTML = firstElement.getAttribute('data-text');
+        infoboxDate.innerHTML = firstElement.getAttribute('data-date');
+
         window.addEventListener("scroll", function () {
             updateTimeline();
             setFixedElements();
         });
 
         function setFixedElements() {
-            const infobox = document.querySelector('.infobox');
             if (window.pageYOffset >= window.innerHeight) {
                 infobox.classList.add('fixed')
             } else {
@@ -189,7 +216,7 @@
             const elements = document.querySelectorAll('.timeline > div');
 
             [].forEach.call(elements, function(el) {
-                if (isElementVisible(el)) {
+                if (isElementActive(el)) {
                     el.classList.add('active-timeline-el')
                 } else {
                     el.classList.remove('active-timeline-el')
@@ -200,13 +227,23 @@
             const lastActive = activeElements[activeElements.length - 1]
 
             if (lastActive !== undefined) {
-                infobox.innerHTML = lastActive.getAttribute('data-text')
+                infoboxText.innerHTML = lastActive.getAttribute('data-text')
+                infoboxDate.innerHTML = lastActive.getAttribute('data-date');
+
+                const imageUrl = lastActive.getAttribute('data-image');
+                if (imageUrl !== null) {
+                    infoboxImage.classList.remove('no-image')
+                    infoboxImage.src = imageUrl;
+                } else {
+                    infoboxImage.classList.add('no-image')
+                    infoboxImage.src = "";
+                }
             }
         }
 
         // rename?
-        function isElementVisible(el) {
-            var top = el.offsetTop;
+        function isElementActive(el) {
+            var top = el.offsetTop - elementOffset;
 
             while(el.offsetParent) {
                 el = el.offsetParent;
