@@ -7,7 +7,7 @@
 
 .infobox {
     position: absolute;
-    top: 50px;
+    top: 25px;
     left: 200px;
     min-width: 200px;
     max-width: 600px;
@@ -61,6 +61,7 @@
 
 .infobox-date {
     margin: 0;
+    font-size: 30px
 }
 
 .infobox-image {
@@ -80,11 +81,11 @@
     padding-bottom: 300px;
 
     .tl-first-element {
-        padding: 95px 10px;
+        padding: 70px 10px;
     }
 
     > div {
-        padding: 100px 10px;
+        padding: 75px 10px;
         display: flex;
         align-items: center;
     }

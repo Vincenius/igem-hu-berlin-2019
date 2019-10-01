@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="content">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="dist/css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="dist/images/favicon.png">
 </head>
-<body class="has-animations landing-page">
+<body class="has-animations" id="container">
     <div class="container">
         <nav>
             <div class="width-limit nav-content">
@@ -89,8 +89,215 @@
             </div>
         </nav>
 
-        <section class="full-height width-limit">
-            <h2>This page does not exist yet.</h2>
+        <div class="fixed-header-container">
+            <section class="fixed-image-header">
+                <img src="https://2019.igem.org/wiki/images/e/e9/T--Humboldt_Berlin--description-header.jpg" alt="notebook" />
+            </section>
+
+            <h1 class="page-headline experiments">Experiments</h1>
+        </div>
+
+        <section class="page-content fixed-header-content experiments">
+            <div class="protocolls-header">
+                <h2 class="page-subheadline">Protocolls</h2>
+                <div class="protocolls-buttons">
+                    <div class="collapse-all">
+                        <img src="https://2019.igem.org/wiki/images/3/3e/T--Humboldt_Berlin--ArrowDown.jpg">
+                        Collapse all
+                    </div>
+                    <div class="expand-all">
+                        <img src="https://2019.igem.org/wiki/images/3/3e/T--Humboldt_Berlin--ArrowDown.jpg">
+                        Expand all
+                    </div>
+                </div>
+            </div>
+
+            <div class="experiments-container">
+                <div class="experiments-bar open">
+                    <h3 class="lightgreen">Chlamydomonas Protocol</h3>
+
+                    <div class="experiments-bar-content">
+                        <div class="experiments-bar">
+                            <h3>Media & Plates</h3>
+
+                            <div class="experiments-bar-content">
+                                <p>
+                                    To be able to work with C. reinhardtii, you will need medium.
+                                    This medium can be in either liquid or solid form and is essential
+                                    for any experiment regarding C. reinhardtii. The media we used for
+                                    C. reinhardtii is TAP medium.
+                                </p>
+
+                                <table>
+                                    <tr>
+                                        <th scope="col">Media</th>
+                                        <th scope="col">0,5 L</th>
+                                        <th scope="col">1,8L</th>
+                                    </tr>
+                                    <tr>
+                                        <td><b>40 x TAP/TA/TAPi</b></td>
+                                        <td>12,5 ml</td>
+                                        <td>20 ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>40 x Beijerink Salts</b></td>
+                                        <td>12,5 ml</td>
+                                        <td>20 ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Trace Elements (revised)</b></td>
+                                        <td>3,5 ml</td>
+                                        <td>5,6 ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>H2O</b></td>
+                                        <td>471,5 ml</td>
+                                        <td>754,4 ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>For Plates: + Agar (1,8 %)</b></td>
+                                        <td>7,2 g</td>
+                                        <td>14,4 g</td>
+                                    </tr>
+                                </table>
+                                <p>Tap Medium should be adjusted to 7,0 - 7,2 pH and autoclaved.</p>
+                            </div>
+                        </div>
+                        <div class="experiments-bar">
+                            <h3>Cultivation</h3>
+
+                            <div class="experiments-bar-content">
+                                TODO
+                            </div>
+                        </div>
+                        <div class="experiments-bar">
+                            <h3>Transformation</h3>
+
+                            <div class="experiments-bar-content">
+                                TODO
+                            </div>
+                        </div>
+                        <div class="experiments-bar">
+                            <h3>Colony Screening PCR</h3>
+
+                            <div class="experiments-bar-content">
+                                TODO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experiments-bar open">
+                    <h3 class="pink">E. coli Protocols</h3>
+
+                    <div class="experiments-bar-content">
+                        <div class="experiments-bar open">
+                            <h3>Cultivation</h3>
+
+                            <div class="experiments-bar-content">
+                                <div class="experiments-bar">
+                                    <h3>Media & Plates</h3>
+
+                                    <div class="experiments-bar-content">
+                                        TODO
+                                    </div>
+                                </div>
+                                <div class="experiments-bar">
+                                    <h3>Overnight Cultures</h3>
+
+                                    <div class="experiments-bar-content">
+                                        TODO
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experiments-bar">
+                            <h3>Transformation</h3>
+
+                            <div class="experiments-bar-content">
+                                TODO
+                            </div>
+                        </div>
+                        <div class="experiments-bar">
+                            <h3>DNA-Isolation</h3>
+
+                            <div class="experiments-bar-content">
+                                TODO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experiments-bar open">
+                    <h3 class="lightpurple">Synthesis Protocols</h3>
+
+                    <div class="experiments-bar-content">
+                        <div class="experiments-bar">
+                            <h3>Sequence & Primer Design</h3>
+
+                            <div class="experiments-bar-content">
+                                TODO
+                            </div>
+                        </div>
+                        <div class="experiments-bar">
+                            <h3>PCR</h3>
+
+                            <div class="experiments-bar-content">
+                                TODO
+                            </div>
+                        </div>
+                        <div class="experiments-bar">
+                            <h3>Digestion</h3>
+
+                            <div class="experiments-bar-content">
+                                TODO
+                            </div>
+                        </div>
+                        <div class="experiments-bar">
+                            <h3>Ligation</h3>
+
+                            <div class="experiments-bar-content">
+                                TODO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experiments-bar open">
+                    <h3 class="greyblue">General</h3>
+
+                    <div class="experiments-bar-content">
+                        <div class="experiments-bar">
+                            <h3>Gel Electrophoresis</h3>
+
+                            <div class="experiments-bar-content">
+                                TODO
+                            </div>
+                        </div>
+                        <div class="experiments-bar">
+                            <h3>Protein Expression: SDS-page</h3>
+
+                            <div class="experiments-bar-content">
+                                TODO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experiments-bar open">
+                    <h3 class="lightblue">Workflow</h3>
+
+                    <div class="experiments-bar-content">
+                        <div class="experiments-bar">
+                            <h3>Plasmid assembly</h3>
+
+                            <div class="experiments-bar-content">
+                                TODO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -146,6 +353,32 @@
         </footer>
     </div>
 
-    <script src="dist/js/main.min.js"></script>
+    <script>
+        var dropdowns = document.querySelectorAll('.experiments-bar h3');
+        var experimentBars = document.querySelectorAll('.experiments-bar');
+        // TODO queryselectorall?
+        for (var i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].addEventListener('click', function(event) {
+                var barContainer = this.closest('.experiments-bar');
+                if (barContainer.classList.contains('open')) {
+                    barContainer.classList.remove('open');
+                } else {
+                    barContainer.classList.add('open');
+                }
+            });
+        }
+
+        document.querySelector('.collapse-all').addEventListener('click', function() {
+            for (var i = 0; i < experimentBars.length; i++) {
+                experimentBars[i].classList.remove('open');
+            };
+        });
+
+        document.querySelector('.expand-all').addEventListener('click', function() {
+            for (var i = 0; i < experimentBars.length; i++) {
+                experimentBars[i].classList.add('open');
+            };
+        });
+    </script>
 </body>
 </html>

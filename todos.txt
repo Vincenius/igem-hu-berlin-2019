@@ -1,5 +1,4 @@
-- Notebook Seite
-- interaktive Grafik
+- Notebook Seite (OK)
 - Neues Element Experiments Seite
     - Verlinkung zu einzelnen Drop-Down Menü möglich
-- Bild mit Bildunterschrift
+- interaktive Grafik

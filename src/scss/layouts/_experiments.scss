@@ -1,0 +1,114 @@
+.page-headline.experiments {
+    font-size: 13vw;
+    line-height: 14vh;
+}
+.experiments {
+    .experiments-container {
+        margin: 50px 20px;
+    }
+
+    .protocolls-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .protocolls-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .collapse-all, .expand-all {
+        margin: 10px 2vw;
+        font-size: 30px;
+        cursor: pointer;
+
+        img {
+            width: 26px;
+            display: inline-block;
+        }
+    }
+
+    .collapse-all img {
+        transform: rotate(180deg);
+    }
+
+    .experiments-container > .experiments-bar {
+        margin-bottom: 50px;
+    }
+
+    .experiments-bar {
+        h3 {
+            position: relative;
+            color: #000;
+            padding: 10px 30px;
+            pointer-events: none;
+
+            &.lightgreen { background-color: $lightGreen; }
+            &.pink { background-color: $pink; }
+            &.lightpurple { background-color: $lightPurple; }
+            &.greyblue { background-color: $greyBlue; }
+            &.lightblue { background-color: $lightBlue; }
+
+            &::after {
+                content: '<';
+                position: absolute;
+                height: 100%;
+                right: 10px;
+                top: 0;
+                padding: 10px;
+                color: #fff;
+                pointer-events: all;
+                transform: rotate(-90deg);
+                font-size: 28px;
+                cursor: pointer;
+            }
+        }
+
+        .experiments-bar-content {
+            display: none;
+            margin-left: 50px;
+        }
+
+        &.open {
+            > .experiments-bar-content {
+                display: block;
+            }
+
+            > h3::after {
+                transform: rotate(90deg);
+            }
+        }
+
+        // second level
+        .experiments-bar {
+            h3 {
+                background-color: $darkGrey;
+            }
+
+            // 3rd level
+            .experiments-bar h3 {
+                background-color: $lightGrey;
+                &::after {
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+}
