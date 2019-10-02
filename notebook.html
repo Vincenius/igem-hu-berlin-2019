@@ -98,6 +98,21 @@
         </div>
         <div class="full-height fixed-header-content notebook">
             <section class="width-limit">
+                <div class="category-container">
+                    <h3>Select category</h3>
+                    <div class="category">
+                        <img src="https://2019.igem.org/wiki/images/6/6f/T--Humboldt_Berlin--label_notebook_synthesis.png" alt="Synthesis: Parts and Vectors" />
+                    </div>
+                    <div class="category">
+                        <img src="https://2019.igem.org/wiki/images/e/e6/T--Humboldt_Berlin--label_notebook_human_practise.png" alt="human practice" />
+                    </div>
+                    <div class="category">
+                        <img src="https://2019.igem.org/wiki/images/a/ac/T--Humboldt_Berlin--label_notebook_chlamy.png" alt="c. reinhardtii cultivation and transformations"/>
+                    </div>
+                    <div class="category">
+                        <img src="https://2019.igem.org/wiki/images/6/66/T--Humboldt_Berlin--label_notebook_bioreaktor.png" alt="bioreaktor" />
+                    </div>
+                </div>
                 <div class="timeline">
                     <div class="timeline-month tl-first-element"
                         data-text="- Learning MoClo/Golden Gate Design <br>
@@ -205,7 +220,7 @@
         });
 
         function setFixedElements() {
-            if (window.pageYOffset >= window.innerHeight) {
+            if (window.pageYOffset >= (window.innerHeight + 100)) {
                 infobox.classList.add('fixed')
             } else {
                 infobox.classList.remove('fixed')
