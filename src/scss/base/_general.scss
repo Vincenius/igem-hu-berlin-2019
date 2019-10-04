@@ -2,6 +2,10 @@
 	display: none !important;
 }
 
+h1, h2 {
+	overflow: visible;
+}
+
 .grey-bg {
 	background: $greyBlue;
 }
@@ -68,5 +72,35 @@
 	@media screen and (max-width: 760px) {
 		text-align: left;
 		hyphens: none;
+	}
+}
+
+.to-top-link {
+	display: block;
+	text-align: center;
+	font-size: 22px;
+	margin: 50px 0;
+	color: #373535;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+
+	img {
+		display: inline-block;
+		width: 20px;
+		margin-top: -2px;
+		transform: rotate(180deg);
+	}
+}
+
+.no-bulletpoint {
+	list-style: none;
+}
+.hover-blue a {
+	color: #000;
+
+	&:hover {
+		color: $lightGreen;
+		text-decoration: none;
 	}
 }

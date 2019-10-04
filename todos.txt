@@ -1,4 +1,18 @@
-- Notebook Seite (OK)
+- Notebook Seite filter
+
 - Neues Element Experiments Seite
     - Verlinkung zu einzelnen Drop-Down Menü möglich
 - interaktive Grafik
+
+
+- notebook zweispaltig
+- Design und results (siehe foto)
+
+fixes:
+- bild über 2 spalten
+- human practice & education ... headlines kleiner
+
+
+Wenn zeit ist
+- aufsteigende blasen hintergrund
+- video hintergrund
