@@ -7,10 +7,10 @@
 
 .infobox {
     position: absolute;
-    top: 200px;
+    top: 240px;
     left: 200px;
     min-width: 200px;
-    max-width: 600px;
+    max-width: 1200px;
     width: calc(100% - 250px);
     padding: 50px;
     border: 5px solid $lightBlue;
@@ -20,10 +20,18 @@
         text-align: left;
     }
 
+    &.has-image {
+        display: flex;
+
+        > * {
+            margin: 0 20px;
+        }
+    }
+
     &.fixed {
         position: fixed;
         z-index: 3;
-        top: 150px;
+        top: 185px;
         left: 220px;
         width: calc(100% - 290px);
 
@@ -86,8 +94,12 @@
 
     > div {
         padding: 75px 10px;
-        display: flex;
+        display: none;
         align-items: center;
+
+        &.visible {
+            display: flex;
+        }
     }
 }
 
@@ -118,14 +130,56 @@
     h3 {
         display: inline-flex;
         align-items: center;
+        width: 100%;
     }
 }
 
 .category {
     margin: 0 50px;
+    width: 100%;
     cursor: pointer;
 
     @media only screen and (max-width: 1200px) {
         margin: 0 30px;
+    }
+}
+
+.synthesis-color {
+    .infobox {
+        border: 5px solid $orange;
+        &::before { border-color: transparent $orange transparent transparent; }
+    }
+    .timeline-month::before {
+        background: $orange;
+    }
+}
+
+.human-practice-color {
+    .infobox {
+        border: 5px solid $greyBlue;
+        &::before { border-color: transparent $greyBlue transparent transparent; }
+    }
+    .timeline-month::before {
+        background: $greyBlue;
+    }
+}
+
+.chlamy-color {
+    .infobox {
+        border: 5px solid $green;
+        &::before { border-color: transparent $green transparent transparent; }
+    }
+    .timeline-month::before {
+        background: $green;
+    }
+}
+
+.bioreaktor-color {
+    .infobox {
+        border: 5px solid $lightBlue;
+        &::before { border-color: transparent $lightBlue transparent transparent; }
+    }
+    .timeline-month::before {
+        background: $lightBlue;
     }
 }
