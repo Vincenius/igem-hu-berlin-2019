@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="content">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="dist/css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="dist/images/favicon.png">
 </head>
-<body class="has-animations landing-page">
+<body class="has-animations" id="container">
     <div class="container">
         <nav>
             <div class="width-limit nav-content">
@@ -37,11 +37,11 @@
                         </div>
                         <div class="devider"></div>
                         <div class="item">
-                            <a href="/project.html">Project</a>
+                            <a class="active" href="/project.html">Project</a>
                             <div class="submenu">
                                 <a href="/description.html">Description</a>
                                 <a href="/design.html">Design</a>
-                                <a href="/experimentals.html">Experimentals</a>
+                                <a class="active" href="/experimentals.html">Experimentals</a>
                                 <a href="/notebook.html">Notebook</a>
                                 <a href="/contribution.html">Contribution</a>
                                 <a href="/results.html">Results</a>
@@ -52,7 +52,7 @@
                         </div>
                         <div class="devider"></div>
                         <div class="item">
-                            <a class="active" href="/parts.html">Parts</a>
+                            <a href="/parts.html">Parts</a>
                             <div class="submenu">
                                 <a href="/parts_overview.html">Parts overview</a>
                                 <a href="/basic_parts.html">Basic parts</a>
@@ -89,63 +89,223 @@
             </div>
         </nav>
 
-        <section class="full-height width-limit">
-            <h2>This page does not exist yet.</h2>
-        </section>
-    </main>
+        <div class="fixed-header-container">
+            <section class="fixed-image-header">
+                <img src="https://2019.igem.org/wiki/images/e/e9/T--Humboldt_Berlin--description-header.jpg" alt="notebook" />
+            </section>
 
-    <div class="footer-container">
-        <footer class="width-limit">
-            <img src="dist/images/T--Humboldt_Berlin--logo_black.png" class="footer-logo" alt="Chlamylicious Logo Black" />
-            <div class="footer-right">
-                <ul>
-                    <li>
-                        <a href="/">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/team.html">
-                            Team
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/project.html">
-                            Project
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/parts.html">
-                            Parts
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="/safety.html">
-                            Safety
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/human_practices.html">
-                            Human Practices
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/awards.html">
-                            Awards
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/for_judges.html">
-                            For Judges
-                        </a>
-                    </li>
-                </ul>
+            <h1 class="page-headline description">Parts</h1>
+        </div>
+
+        <section class="page-content fixed-header-content expandable">
+            <div class="width-limit">
+                <div class="protocolls-header">
+                    <h2 class="page-subheadline"></h2>
+                    <div class="protocolls-buttons">
+                        <div class="collapse-all">
+                            <img src="https://2019.igem.org/wiki/images/3/3e/T--Humboldt_Berlin--ArrowDown.jpg">
+                            Collapse all
+                        </div>
+                        <div class="expand-all">
+                            <img src="https://2019.igem.org/wiki/images/3/3e/T--Humboldt_Berlin--ArrowDown.jpg">
+                            Expand all
+                        </div>
+                    </div>
+                </div>
+                <div class="expandable-container">
+                    <div class="expandable-preview">
+                        <p class="medium-sized">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame
+                        </p>
+                        <img src="https://2019.igem.org/wiki/images/5/5d/T--Humboldt_Berlin--chlamy_wusel.jpeg" alt="preview" />
+                    </div>
+                    <div class="expandable-more">
+                        <div class="two-columns">
+                            <div>
+                                <p class="medium-sized">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                    erat, sed diam voluptua.
+                                </p>
+                                <p class="medium-sized">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame.
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame
+                                </p>
+                            </div>
+                            <div>
+                                <p class="medium-sized">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame
+                                </p>
+                                <p class="medium-sized">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expandable-readall">
+                        <span class="readmore">Read more</span>
+                        <span class="readless">Read less</span>
+                        <img src="https://2019.igem.org/wiki/images/3/3e/T--Humboldt_Berlin--ArrowDown.jpg">
+                    </div>
+                </div>
+                <div class="expandable-container">
+                    <div class="expandable-preview">
+                        <p class="medium-sized">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame
+                        </p>
+                        <img src="https://2019.igem.org/wiki/images/0/0e/T--Humboldt_Berlin--chlamydomonas_schaubild_eng.png" alt="preview" />
+                    </div>
+                    <div class="expandable-more">
+                        <div class="two-columns">
+                            <div>
+                                <p class="medium-sized">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                    erat, sed diam voluptua.
+                                </p>
+                                <p class="medium-sized">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame.
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame
+                                </p>
+                            </div>
+                            <div>
+                                <p class="medium-sized">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame
+                                </p>
+                                <p class="medium-sized">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expandable-readall">
+                        <span class="readmore">Read more</span>
+                        <span class="readless">Read less</span>
+                        <img src="https://2019.igem.org/wiki/images/3/3e/T--Humboldt_Berlin--ArrowDown.jpg">
+                    </div>
+                </div>
             </div>
-        </footer>
+        </section>
+
+        <div class="footer-container">
+            <footer class="width-limit">
+                <img src="dist/images/T--Humboldt_Berlin--logo_black.png" class="footer-logo" alt="Chlamylicious Logo Black" />
+                <div class="footer-right">
+                    <ul>
+                        <li>
+                            <a href="/">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/team.html">
+                                Team
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/project.html">
+                                Project
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/parts.html">
+                                Parts
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="/safety.html">
+                                Safety
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/human_practices.html">
+                                Human Practices
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/awards.html">
+                                Awards
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/for_judges.html">
+                                For Judges
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
     </div>
 
-    <script src="dist/js/main.min.js"></script>
+    <script>
+        var readMores = document.querySelectorAll('.expandable-readall');
+        var allContainers = document.querySelectorAll('.expandable-container');
+
+        for (var i = 0; i < readMores.length; i++) {
+            readMores[i].addEventListener('click', function(event) {
+                var container = this.closest('.expandable-container');
+                if (container.classList.contains('open')) {
+                    container.classList.remove('open');
+                } else {
+                    container.classList.add('open');
+                }
+            });
+        }
+
+        document.querySelector('.collapse-all').addEventListener('click', function() {
+            for (var i = 0; i < allContainers.length; i++) {
+                allContainers[i].classList.remove('open');
+            };
+        });
+
+        document.querySelector('.expand-all').addEventListener('click', function() {
+            for (var i = 0; i < allContainers.length; i++) {
+                allContainers[i].classList.add('open');
+            };
+        });
+    </script>
 </body>
 </html>
