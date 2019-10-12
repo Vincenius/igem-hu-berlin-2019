@@ -100,15 +100,17 @@
         font-family: arial, sans-serif;
         border-collapse: collapse;
         width: 100%;
+        max-width: 500px;
+        border: 1px solid #000;
+    }
+
+    th {
+        background-color: #dddddd;
     }
 
     td, th {
-        border: 1px solid #dddddd;
+        border: 1px solid #000;
         text-align: left;
         padding: 8px;
-    }
-
-    tr:nth-child(even) {
-        background-color: #dddddd;
     }
 }
