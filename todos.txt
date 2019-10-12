@@ -1,16 +1,18 @@
-- Notebook Seite filter
+- Notebook Seite filter (OK)
 
 - Neues Element Experiments Seite
     - Verlinkung zu einzelnen Drop-Down Menü möglich
 - interaktive Grafik
 
 
-- notebook zweispaltig
 - Design und results (siehe foto)
+- bild über 2 spalten
+
 
 fixes:
-- bild über 2 spalten
 - human practice & education ... headlines kleiner
+- notebook tabelle kleiner?
+
 
 
 Wenn zeit ist
